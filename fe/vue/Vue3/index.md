@@ -1,8 +1,15 @@
-## 1、响应式原理的基本实现
+## 1、响应式
 
-### 1.1、Proxy、track、trigger、effect
+### 1.1 响应式原理的基本实现
 
-### 1.2、reactive、ref、computed、watcher
+> - 通过 Proxy 代理对象，拦截对象的读操作（get），使用 track 收集副作用函数（使用桶来存储：weakMap-map-set），拦截对象的写操作（set），使用 trigger 触发副作用函数
+> - 组件的 render 函数被通用的 effect 函数注册包裹形成一个副作用函数
+> - render 函数执行时会触发对象的读操作，从而收集副作用函数
+> - 代理的对象的属性被修改时，会触发副作用函数的执行
+
+### 1.2 watchEffect vs watch
+
+> watchEffect 自动收集依赖，watch 手动收集依赖
 
 ## 2、虚拟 DOM 与 diff 算法
 
@@ -32,3 +39,9 @@
 ## 4、内建组件
 
 ### 4.1 keep-alive
+
+> LRU 缓存，组件的实现与底层渲染有关系
+
+### 4.2 Teleport
+
+> 打破 DOM 层级的限制，将组建的渲染位置转移到指定的位置
