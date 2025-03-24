@@ -1,0 +1,44 @@
+div {
+  /*
+  positioning:定位
+  + 由于定位（positioning）
+  可以从正常的文档流中移除元素
+  ，并且还能覆盖盒模型（box model）相关的样式
+  */
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 12;
+
+  /*
+    盒模型相关（Box Model）
+  */
+  display: block;
+  float: left;
+  width: 100px;
+  height: 100px;
+  padding: 10px;
+  margin: 10px;
+
+  /*
+    排版：Typographic
+  */
+  font: normal 13px "Helvetica Neue", sans-serif;
+  line-height: 100px;
+  color: red;
+  text-align: center;
+
+  /*
+    视觉：visual
+  */
+
+  background-color: orange;
+  border-radius: 3px;
+  border: 1px solid red;
+}
+
+/*
+ 画一个半弧
+*/

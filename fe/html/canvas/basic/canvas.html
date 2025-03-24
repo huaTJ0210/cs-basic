@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .mycanvas {
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="canvas" class="mycanvas" width="300" height="300"></canvas>
+    <script>
+      /*
+       * https://blog.csdn.net/sj_wl/article/details/127682262
+       */
+
+      const canvas = document.getElementById('canvas');
+      const context = canvas.getContext('2d');
+      /*
+      // 从（0,0）开始绘制一条到（200,100）的直线
+        context.moveTo(0, 0)
+        context.lineTo(200, 100)
+        context.stroke()
+      */
+
+      /*
+      // 绘制弧： 圆心坐标，半径，弧的起始
+        context.beginPath()
+        context.arc(50, 50, 40, 0, 2 * Math.PI)
+        context.stroke()
+      */
+
+      /*
+      // 绘制文字
+        context.font = '30px Arial'
+        context.fillText('Hello World', 10, 50)
+      */
+      context.fillText('Hello World', 10, 50);
+    </script>
+  </body>
+</html>

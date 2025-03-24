@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .container {
+        display: flex;
+        width: 600px;
+        height: 300px;
+        background-color: gray;
+      }
+
+      .left {
+        flex: 0 2 500px;
+        background-color: red;
+      }
+      .right {
+        flex: 0 1 400px;
+        background-color: blue;
+      }
+      /*
+       求出left和right最后的宽度: 
+       (1) 内容最终超出了300px
+       （2）要计算总权重： 500px * 2 + 400px * 1 = 1400px
+       （3）单独项要减去的尺寸： 
+           left : 500px * 2 / 1400px * 300px = 214.285 
+           right: 400px * 1 / 1400px * 300px = 85.714
+        (4)计算出最终的数据
+          left ： 500 - 214.285 
+          right ： 400 - 85.714
+      */
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="left"></div>
+      <div class="right"></div>
+    </div>
+  </body>
+</html>

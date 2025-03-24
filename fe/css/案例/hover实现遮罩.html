@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        padding: 200px;
+      }
+
+      .container {
+        position: relative;
+        width: 300px;
+        transition: 0.5s ease;
+      }
+
+      .container img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+
+      .overlay {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 0;
+        height: 100%;
+        background-color: aqua;
+        transition: 0.5s ease;
+        overflow: hidden; /*将文字隐藏*/
+      }
+
+      .container:hover .overlay {
+        width: 100%;
+        right: 100%;
+      }
+
+      .container:hover {
+        margin-top: -5px;
+      }
+
+      .overlay-text {
+        white-space: nowrap;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        overflow: hidden;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <img src="flower.png" alt="图片" />
+      <div class="overlay">
+        <p class="overlay-text">hello world</p>
+      </div>
+    </div>
+  </body>
+</html>

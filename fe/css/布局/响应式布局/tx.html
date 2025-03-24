@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      /*
+          1、响应式布局：
+          
+          1.1 : web app  ： 
+           + flex+rem+js监听onresize事件的变化去动态改变 body元素的fontsize
+           + 默认375的设计稿
+
+           附加：
+           不使用js注册事件监听的方式，可以采用媒体查询；
+             
+          1.2 : pc端：栅格布局（bootstrap），使用组件库基本默认自带
+           + row和column组件可以完成整体页面的分割（实际原理采用的是百分比的形式）
+        */
+      ;(function (base, min, max, scaling) {
+        var cacheWidth = 0
+        var timer
+        var docEl = document.documentElement
+        var recalc = function () {
+          var clientWidth = docEl.clientWidth
+          if (!clientWidth) return
+          clientWidth = Math.max(Math.min(clientWidth, max), min)
+          if (cacheWidth !== clientWidth) {
+            clearInterval(timer)
+            cacheWidth = clientWidth
+            docEl.style.fontSize = scaling * (clientWidth / base) + 'px'
+          }
+        }
+        recalc()
+        setTimeout(recalc, 300)
+        if (!window.addEventListener) return
+        var resizeWithTimer = function () {
+          timer = setInterval(recalc, 10)
+        }
+        if ('onorientationchange' in window)
+          window.addEventListener('orientationchange', resizeWithTimer)
+        if ('onresize' in window)
+          window.addEventListener('resize', resizeWithTimer)
+      })(375, 300, 768, 100)
+    </script>
+  </head>
+  <body></body>
+</html>

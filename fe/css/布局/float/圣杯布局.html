@@ -1,0 +1,45 @@
+<html lang="en">
+  <head>
+    <style>
+      .main,
+      .left,
+      .right {
+        float: left;
+        height: 200px;
+      }
+
+      .main {
+        width: 100%;
+        background-color: aqua;
+      }
+
+      .left {
+        width: 100px;
+        background-color: orange;
+        margin-left: -100%; 
+        position: relative;
+        left: -100px;
+      }
+
+      .right {
+        width: 200px;
+        background-color: red;
+        margin-left: -200px;
+        position: relative;
+        right: -200px;
+      }
+
+      .container {
+        padding-left: 100px;
+        padding-right: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="main">2</div>
+      <div class="left">1</div>
+      <div class="right">3</div>
+    </div>
+  </body>
+</html>

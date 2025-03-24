@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      /*
+       1、选择器的权重及优先级？
+       + 不同选择器的权重不同，权重越高优先级越高
+      */
+    </script>
+    <style>
+      /* 子选择器: 儿子 */
+      div > li {
+        color: red;
+      }
+      /* 后代选择器：儿子及孙子都可以 */
+      div li {
+        font-size: 40px;
+      }
+
+      /*
+         组合选择器 1 / 2 / 3  ： 在2和3的前面添加/
+      */
+      ul.breadcrumb li + li:before {
+        padding: 8px;
+        color: black;
+        content: '/\00a0';
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <ul>
+        <li>123</li>
+        <li>123</li>
+        <li>123</li>
+      </ul>
+    </div>
+  </body>
+</html>

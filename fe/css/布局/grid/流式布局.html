@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        padding: 40px;
+      }
+
+      /* 一行排列指定数目的元素，宽度不够则换行*/
+      .container {
+        display: grid;
+        grid-template-columns: auto auto auto auto; /*一行有几列，每一列的宽度是多少*/
+        gap: 10px;
+
+        padding: 10px;
+        background-color: pink;
+      }
+
+      .container div {
+        border: 1px solid red;
+        padding: 10px;
+        font-size: 30px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+      <div>7</div>
+      <div>8</div>
+    </div>
+  </body>
+</html>

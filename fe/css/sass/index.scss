@@ -1,0 +1,72 @@
+// 引入其他文件
+@import 'reset.scss';
+
+// 变量的定义与使用
+$black: black;
+$myColor: green;
+
+body {
+  $myColor: red; //局部作用域
+  color: $black;
+}
+
+div {
+  $myColor: red !global; //升级为全局作用域
+  color: $black;
+}
+
+p {
+  color: $myColor;
+}
+
+// 嵌套选择器
+nav {
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+  li {
+    display: inline;
+  }
+  a {
+    display: block;
+    padding: 6px 15px;
+    text-decoration: none;
+  }
+}
+
+// 创建代码块
+// 1、定义一个代码块别名
+@mixin important-text {
+  color: red;
+  font-size: 25px;
+  font-weight: bold;
+  border: 1px solid black;
+}
+// 2、定义一个可以传递参数的代码块
+@mixin border($color: blue, $width: 1px) {
+  border: $width solid $color;
+}
+
+div {
+  // 可以重复使用代码块
+  @include important-text;
+
+  @include border(blue, 1px);
+}
+
+// @extend
+
+.button-basic {
+  border: none;
+  padding: 15px 30px;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.button-report {
+  @extend .button-basic;
+  background-color: red;
+}

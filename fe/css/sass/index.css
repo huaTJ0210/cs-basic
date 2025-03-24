@@ -1,0 +1,42 @@
+html,
+body,
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: black;
+}
+
+div {
+  color: black;
+}
+
+p {
+  color: red;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+nav li {
+  display: inline;
+}
+nav a {
+  display: block;
+  padding: 6px 15px;
+  text-decoration: none;
+}
+
+div {
+  color: red;
+  font-size: 25px;
+  font-weight: bold;
+  border: 1px solid black;
+}
+
+/*# sourceMappingURL=index.css.map */

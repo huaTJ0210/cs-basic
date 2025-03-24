@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .app {
+        display: flex;
+        flex-direction: column;
+        width: 200px;
+        height: 300px;
+        background-color: gray;
+      }
+      .content {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        /* min-height: 0; */
+        height: 0;
+      }
+      .list-item {
+        height: 40px;
+        border-bottom: 1px solid lightblue;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="app">
+      <p>标题</p>
+      <div class="content">
+        <p>内部标题</p>
+        <div style="overflow: auto">
+          <p class="list-item">1</p>
+          <p class="list-item">1</p>
+          <p class="list-item">1</p>
+          <p class="list-item">1</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

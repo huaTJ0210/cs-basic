@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      body {
+        text-align: center;
+      }
+      .tooltip {
+        position: relative;
+        display: inline-block;
+        border-bottom: 1px dotted black;
+      }
+      .tooltip .tooltip-text {
+        visibility: hidden;
+        position: absolute;
+        width: 120px;
+        padding: 0 5px;
+        background-color: black;
+        color: white;
+        border-radius: 5px;
+        text-align: center;
+
+        bottom: 100%;
+        left: 50%;
+        margin-left: -60px;
+      }
+
+      .tooltip .tooltip-text::after {
+        content: '';
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        margin-left: -5px;
+        border-width: 5px; /*三角形宽度的一半*/
+        border-style: solid;
+        border-color: black transparent transparent transparent;
+      }
+
+      .tooltip:hover .tooltip-text {
+        visibility: visible;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>提示框</h2>
+    <p>hover 文字 显示提示内容</p>
+    <div class="tooltip">
+      hover text show the tool tips
+      <span class="tooltip-text">tooltip text</span>
+    </div>
+  </body>
+</html>

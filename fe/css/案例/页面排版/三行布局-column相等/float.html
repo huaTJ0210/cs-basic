@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      header h2 {
+        padding: 20px;
+        background-color: aqua;
+        text-align: center;
+      }
+      .row::after {
+        content: '';
+        display: table;
+        clear: both;
+      }
+      .clounm {
+        width: 33.33%;
+        height: 200px;
+        float: left;
+        padding: 10px;
+        background: pink;
+      }
+
+      footer h3 {
+        padding: 10px;
+        text-align: center;
+        background-color: orange;
+      }
+
+      @media screen and (max-width: 600px) {
+        .clounm {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h2>header</h2>
+    </header>
+    <main>
+      <div class="row">
+        <div class="clounm">1</div>
+        <div class="clounm">2</div>
+        <div class="clounm">3</div>
+      </div>
+    </main>
+    <footer>
+      <h3>footer</h3>
+    </footer>
+  </body>
+</html>

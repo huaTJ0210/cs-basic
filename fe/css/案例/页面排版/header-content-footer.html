@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /*头部和底部固定，中间内容部分自适应，随着浏览器窗口的高度变化，
+      footer始终处于底部*/
+      .header {
+        height: 100px;
+        background-color: red;
+      }
+      .content {
+        height: calc(100vh - 200px);
+        background-color: aqua;
+      }
+      .footer {
+        height: 100px;
+        background-color: orange;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">header</div>
+    <div class="content">content</div>
+    <div class="footer">footer</div>
+  </body>
+</html>
