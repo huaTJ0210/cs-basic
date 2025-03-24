@@ -1,0 +1,2 @@
+- [函数编程指南](https://llh911001.gitbooks.io/mostly-adequate-guide-chinese/content/ch1.html)
+- [函数编程入门指南](https://www.ruanyifeng.com/blog/2017/02/fp-tutorial.html)

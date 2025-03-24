@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      /*
+          1、 事件
+            + 事件的捕获
+            + 事件的冒泡
+          2、 事件委托
+           + 将多个子元素的事件监听添加到父元素上，以达到节约内存及便于管理的目的
+
+          3、阻止事件冒泡
+           + 如果只使用stopPropagation是只能阻止事件冒泡至其父节点，
+            而stopImmediatePropagation既能阻止事件冒泡至父节点，也能阻止当前节点上其他同类型事件的触发。
+        */
+
+      document.getElementById('second').addEventListener(
+        'click',
+        function () {
+          alert('second')
+          event.stopImmediatePropagation()
+        },
+        true
+      ) // 第三个参数代表是在捕获阶段还是冒泡阶段去触发事件的回调
+    </script>
+  </head>
+  <body></body>
+</html>
